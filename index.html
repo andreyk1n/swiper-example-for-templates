@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Підключення стилів Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <title>Swiper Slider</title>
+</head>
+<body>
+
+  <!-- Створення контейнера слайдера -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Додайте ваші слайди тут -->
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1682686581776-b6ebee7c150e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1682686581776-b6ebee7c150e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1682686581776-b6ebee7c150e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1682686581776-b6ebee7c150e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1682686581776-b6ebee7c150e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1682686581776-b6ebee7c150e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1682686581776-b6ebee7c150e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+      <!-- і так далі -->
+    </div>
+    <!-- Додавання пагінації -->
+    <div class="swiper-button-next">
+      </div>
+      <div class="swiper-button-prev">
+      </div>
+      
+  </div>
+
+  <!-- Підключення Swiper та його скрипту -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0, // Задайте бажаний кут обертання для ефекту 3D-каруселі
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+  </script>
+
+</body>
+</html>

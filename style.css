@@ -1,0 +1,66 @@
+/* Загальні стилі для слайдера */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Специфічні стилі для 3D-ефекту каруселі */
+  .swiper-container {
+    perspective: 1200px;
+  }
+  
+  .swiper-wrapper {
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+  
+  .swiper-slide {
+    width: 200px; /* Ширина слайда */
+    height: 300px; /* Висота слайда */
+    margin-right: 20px; /* Відступ між слайдами */
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transition: transform 0.5s;
+  }
+  
+  /* Зменшуємо прозорість тіні, яка додається в результаті 3D-ефекту */
+  .swiper-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateZ(-1px); /* Рухаємо тінь позаду слайду */
+    transition: opacity 0.5s;
+  }
+  
+  /* Збільшуємо прозорість тіні при наведенні миші на слайд */
+  .swiper-slide:hover::after {
+    opacity: 0.4;
+  }
+  
+  /* Робимо активний слайд видимимим */
+  .swiper-slide-active {
+    transform: translateZ(50px); /* Зсуваємо активний слайд уперед для видимості */
+  }
+  
+  /* Збільшуємо розмір активного слайда для підсилення ефекту 3D */
+  .swiper-slide-active {
+    width: 250px;
+    height: 350px;
+  }
+  
+
+  .swiper-slide img {
+    width: 500px;
+    height: 350px;
+  }
+
